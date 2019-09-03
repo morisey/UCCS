@@ -5,10 +5,13 @@
 \usepackage[english]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath}
+\usepackage{textcomp}
 \usepackage{graphicx}
 \usepackage{hyperref}
 \usepackage{wrapfig}
 \usepackage{csquotes}
+\usepackage{type1cm}
+\usepackage{lettrine}
 %\bibliography{./IEEEabrv,./Intro}
 
 \newcommand{\myname}{Jennifer S. Smith}
@@ -24,63 +27,43 @@ I am pursuing the Engineering-Security PhD and the graduate certificate in Homel
 \end{abstract}
 \section{Introduction}
 
-Ms. Smith is a security professional whose experience follows the evolution of multiple convergent fields. She remains focused on community involvement and employment that serves the greater welfare of those around her. She has recently completed a Master's degree in Cybersecurity and Leadership at the University of Washington.
+\lettrine{M}{s} Smith is a security professional whose experience follows the evolution of multiple convergent fields. She remains focused on community involvement and employment that serves the greater welfare of those around her. She has recently completed a Master's degree in Cybersecurity and Leadership at the University of Washington.
 
 \subsection{Professional History}
-\begin{wrapfigure}{r}{0.21\textwidth}\vspace{-0.5cm}%
+\begin{wrapfigure}{r}{0.21\textwidth}%
 \centering
 \includegraphics[width=1.5in,height=1.9in,clip,keepaspectratio]{HeadShot}
 \caption{\myname}
 \end{wrapfigure}
-After her undergraduate, she worked for JavaSoft in corporate marketing, Lycos in engineering, C-Innovation in research and development, and most recently in network operations for a Ochsner Health System in south eastern Louisiana. She took a hiatus in the 2000s to serve her country and worked primarily for the Naval Space and Warfare Command. During that time she was a trainer onboard multiple ships while underway, trainer and repair technician of EOD robots both stateside and in Iraq, worked in Fleet Operations, Navy Reserve Forces Command, and served on various tactical teams to provide services for the fleet. She is a certified repair technician for the primary man-transportable robotic systems used by the Department of Defense. Additionally she spent several years as a communications subject matter expert in the SeaBees.
+After her undergraduate, she worked for JavaSoft in corporate marketing, Lycos in engineering, C-Innovation in research and development, and most recently in network operations for a Ochsner Health System in south eastern Louisiana. She took a hiatus in the 2000s to serve her country and worked primarily for the Naval Space and Warfare Command. During that time she was a trainer onboard multiple ships while underway, trainer and repair technician of EOD robots both stateside and in Iraq \cite{Everett} \cite{Weiner}, worked in Fleet Support, Navy Reserve Forces Command, and served on various tactical teams to provide services for the Department of Defense and other governmental organizations. She is a certified repair technician for the primary man-transportable robotic systems used by the Department of Defense. Additionally she spent several years as a communications subject matter expert in the SeaBees.
 \subsection{Additional History}
-Ms Smith was born and raised in the San Francisco East Bay and holds degrees in chemistry and cybersecurity. She is published in both arts and science in the Journal of Molecular Biology, Biochemistry, Redwood Review, and Doorknobs and Bodypaint. She also enjoys teaching and public speaking and has given talks on computing, international affairs, physical biochemistry, and robotics. Her personal awards include a Navy and Marine Corps Commendation Medal, three Navy and Marine Corps Achievement Medals, three Navy Reserve Meritorious Service Medals, and the Armed Forces Reserve Medal with M and bronze hourglass.\\Ms. Smith currently resides in DuPont, WA and is excited about finally pursuing her Olympic goals through the sport of curling. She enjoys kayaking, hiking, and urban exploration.
+Ms Smith was born and raised in the San Francisco East Bay and holds degrees in chemistry and cybersecurity. She is published in both arts and science in the Journal of Molecular Biology \cite{JSmith3}, Biochemistry \cite{JSmith1}\cite{JSmith2}, Redwood Review, and Doorknobs and Bodypaint. She also enjoys teaching and public speaking and has given talks on computing, international affairs, physical biochemistry, and robotics. Her personal awards include a Navy and Marine Corps Commendation Medal, three Navy and Marine Corps Achievement Medals, three Navy Reserve Meritorious Service Medals, and the Armed Forces Reserve Medal with M and bronze hourglass.
 
-\section{GitHub Link}
+Ms. Smith currently resides in DuPont, WA and is excited about finally pursuing her Olympic goals through the sport of curling. She enjoys kayaking, hiking, and urban exploration.
+
+\section{Document Source and Process}
 
 \href{https://github.com/morisey/UCCS/blob/master/Week 1 Journal}{GitHub Source}
 
-\subsection{How to add Lists}
+This journal was edited in Overleaf beginning with a template. Pieces were pulled from the IEEE template and a few others provided by the host to take advantage of prewritten formatting. The .tex file was saved in GitHub (linked above). The search results from the Kraemer Library were easy to save in Zotero but the references found at the Center for Homeland Security and Defense were copied, pasted, and edited from their full abstract links. Many of those were missing critical items like the title and source.
+
+The most difficult portion of the assignment was the bibliography. Overleaf jumps over the usual hurdle of users not compiling in the correct order by managing the process automatically. After struggling with the examples found for bibtex and biblatex, natlib resulted in instant results the were personally far easier to debug. Conflicts between packages used in bibtex and biblatex were likely a source of confusion early in the process.
+
+TexStudio is a tool that might prove useful in the future in case there are any issues with the cloud options e.g. GitHub or Overleaf outage or security breech.
+\subsection{Research-Related Reading}
 
 \begin{enumerate}
-    \item First reference and some words \citep{KahnemanTFS}
-    \item Second reference      \begin{equation}
-    y(x_1,\ldots,x_n) = f(w_0 + w_1x_1 + \ldots + w_nx_n)
-      \end{equation}
-    \item Third
+    \item After listening to the audio book of Michael Lewis\textquotesingle s "The Undoing Project" it became apparent that many of the types of cognitive bias were explored and defined by a small number of researchers. Nobel Laureate, Danial Kahneman wrote a book called "Thinking Fast and Slow" \cite{KahnemanTFS} describing the history of his research and his companions through the years. A key distinction in human thought is between System 1 and System 2 thinking. This prompted a personal interest in how these concepts play with Artificial Intelligence (AI). If the AI is trying to duplicate human though, is it necessary to introduce aspects of System 1 thinking? And, at the other end, can A reduce human error by promoting System 2 thinking? How is cognitive bias treated by various developers?
+    \item Rigas \textit{et al.} \cite{Rigas} is used as an example of student AI survey paper accepted by IEEE. Their paper uses a tree diagram to illustrate the electric vehicle (EV) research landscape which enables the authors to easily point out the overlaps between leaves of the trees. The routing of EVs and the availability of charging stations is critical to their success and the reduction of carbon monoxide, a factor in climate change. From their assessment they recommend that rerouting and incentivizing drivers to less congested charging stations will increase the chances of success.
+    \item The Government Accountability Office of the U.S. released a testimonial from their chief scientist of applied research and methods (Persons) about AI. The testimony identifies four high-consequence sectors; cybersecurity, automated vehicles, criminal justice and financial services. AI is becoming a key factor in health care and it is strange this was neglected. Persons quotes a technology assessment forum participant as stating, "AI can help prevent inappropriate or harmful human bias." \cite{GAO} This paper offers one way to develop a taxonomy of AI and cognitive bias interplay. It also clearly states the value of AI and the challenges it faces in terms of barriers, access, statutory requirements, and ethical frameworks. Just as cybersecurity is now recognized as a critical step in software development, the latter factors will also need to be incorporated during development, not after deployment.
     \item fourth
     \item fifth 
+    \begin{equation}
+    y(x_1,\ldots,x_n) = f(w_0 + w_1x_1 + \ldots + w_nx_n)
+      \end{equation}
 \end{enumerate}
 
-\subsection{Other references}
-\begin{enumerate}
-    \item \citep{AIPanel}
-    \item \citep{WeedenCan}
-    \item \citep{GAO}
-    \item \citep{WeedenSpace}
-    \item \citep{Rigas}
-    \item \citep{Fidler}
-    \item \citep{Stephens}
-    \item \citep{Frierson}
-    \item \citep{Astorino}
-    \item \citep{Colby}
-    \item \citep{OSTNSS}
-    \item \citep{Saran}
-    \item \citep{Cleveland}
-    \item \citep{acrecampaign}
-    \item \citep{klarin_decade-long_2020}
-    \item \citep{porayska-pomsta_blending_2018}
-    \item \citep{gheondea-eladi_patient_2019}
-    \item \citep{zhang_detecting_2019}
-    \item \citep{she_qos-aware_2019}
-    \item \citep{de_rosa_analytical_2019}
-    \item \citep{rhim_human_2020}
-    \item \citep{linkevicius_linking_2019}
-    \item \citep{tanaka_disease_2018}
-    \item \citep{rigas_managing_2015}
-    \item \citep{shahid_applications_2019}
-\end{enumerate}
-%\renewcommand*{\UrlFont}{\rmfamily}
+\nocite{AIPanel} \nocite{WeedenCan} \nocite{GAO} \nocite{WeedenSpace} \nocite{Rigas} \nocite{Fidler} \nocite{Stephens} \nocite{Frierson} \nocite{Astorino} \nocite{Colby} \nocite{OSTNSS} \nocite{Saran} \nocite{Cleveland} \nocite{acrecampaign} \nocite{klarin_decade-long_2020} \nocite{porayska-pomsta_blending_2018} \nocite{gheondea-eladi_patient_2019} \nocite{zhang_detecting_2019} \nocite{she_qos-aware_2019} \nocite{de_rosa_analytical_2019} \nocite{rhim_human_2020} \nocite{linkevicius_linking_2019} \nocite{tanaka_disease_2018} \nocite{shahid_applications_2019}
 
 \bibliographystyle{IEEEtranN}
 %\bibliographystyle{plain}
